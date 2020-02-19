@@ -1,5 +1,7 @@
-# terraform-aws-api-gateway
+# Terraform AWS API Gateway
 Git repo for creating AWS API Gateway
+
+## [Mind Map for API Gateway](https://github.com/polganesh/wiki-images/blob/master/aws/mindmap/design-new-solutions/AWS%20API%20Gateway.jpeg "Mind Map for API Gateway")
 
 
 ## Purpose of this Module
