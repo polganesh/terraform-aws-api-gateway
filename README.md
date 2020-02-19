@@ -35,7 +35,7 @@ for complete list of variables please refer variables.tf of this module.
 * please note these are indicator for ideal region_id. one can use its own standard if needed.
 
 ### cost_centre
-* It represents an entity which will own cost for resources created in this VPC .
+* It represents an entity which will own cost for resources created in this module .
 * Any org can have multiple departments wfollowing cost centres. following values are indicative.one can use their own indicator,but one need to follow same throughout.
 * all small case letters
 * length 1 to 4 chars
@@ -57,7 +57,7 @@ investment		|inv|
 marketing		|mkt|
 
 ### environment
-* It represents the environment for which this VPC created for. 
+* It represents the environment for which this resource created for. 
 * length 1 to 3 chars
 * all small case letters
 * Possible values
