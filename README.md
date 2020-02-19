@@ -5,6 +5,7 @@ Git repo for creating AWS API Gateway
 ## Purpose of this Module
 + This module proivde facility to create AWS API Gateway **REST** API
 + Add predefined tags to API Gateway for monitoring and billing
++ Provide flexibility to provide resource policy in json format from outside. please also note it provide facility to inject aws account,region on the fly 
 
 ## Dependencies and Prerequisites
 - Terraform version 0.12 and higher
@@ -85,5 +86,28 @@ This module add/override  following tags to various resources created.
 |BuildDate  	|build_date 	|it is less signficant,but if someone wants to track date(predefine date format defined in your org) then it is good indicator for date on which this component/resource created/updated|
 |AppRole  	| 	|it is constant with value **network** for various resources created by this module.|
 |AppService|app_service|application service for which this API Gateway created.|
+
+## Examples
+### Example for creating Private API Gateway
+
+```
+module "simple-api-gw" {
+  source="git::https://github.com/polganesh/terraform-aws-api-gateway.git"
+  region               = "eu-central-1"
+  region_id            = "euc1"
+  seq_id               = "001"
+  environment          = "n"
+  cost_centre          = "infra"
+  build_date           = "14022020"
+  version_id           = "001"
+  app_service          = "myapp"
+  api_description      = "API Resource for testing"
+  end_point_type       = ["PRIVATE"]
+  vpc_endpoint_ids     = ["XXXX", "yyyyy"]
+  policy_file_location = "/init/api-gw-access-policy.json"
+
+}
+```
+
 
 
