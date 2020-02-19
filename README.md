@@ -19,7 +19,7 @@ Git repo for creating AWS API Gateway
 |:--------------------------------------|:--------------|:------------	|:---	|:---------------------------------------------------|
 |region					|N		|eu-west-1	|string	| Valid AWS Region|
 |region_id				|N		|euw1		|string	| Region Identifier. for more information about this please refer following sections|
-|seq_id				|N		|001|string	|usually some sequential number. in this case it should be same as vpc_seq_id |
+|seq_id				|N		|001|string	|usually some sequential number.  |
 |environment				|N		|dev|string	|indicates name of our environment.it can be anything. Possible values dev,cit,sit,uat,pprod,prod,n. for more information refer following sections.|
 |cost_centre				|N		|na|string	|A part of an organization to which bill might be charged.e.g. finance/it/hr/wholesale/retail/investment etc...|
 
