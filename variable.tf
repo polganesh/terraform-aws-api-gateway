@@ -67,3 +67,18 @@ variable "tag_for_api_gw_rest_api" {
   type    = "map"
   default = {}
 }
+
+variable "vpc_endpoint_ids" {
+  type    = "list"
+  default = []
+}
+
+variable "app_service" {
+  default = ""
+}
+
+variable "policy_file_location" {
+  default = ""
+}
+
+
