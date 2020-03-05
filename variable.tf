@@ -81,4 +81,25 @@ variable "policy_file_location" {
   default = ""
 }
 
+variable "is_create_vpc_link" {
+  default = false
+}
+
+variable "vlink_description" {
+  default = ""
+}
+
+variable "vlink_target_lb_arns_list" {
+  type        = "list"
+  description = "The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target."
+  default     = []
+}
+
+variable "tag_for_vpc_link" {
+  type    = "map"
+  default = {}
+}
+
+
+
 

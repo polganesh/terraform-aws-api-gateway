@@ -9,3 +9,7 @@ output "execution_arn" {
 output "arn" {
   value = "${aws_api_gateway_rest_api.rest_api.arn}"
 }
+
+output "vpc_link_id" {
+  value = "${aws_api_gateway_vpc_link.main[0].id}"
+}
