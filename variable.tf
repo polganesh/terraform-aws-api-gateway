@@ -59,17 +59,17 @@ variable "build_date" {
 }
 
 variable "common_tags" {
-  type    = "map"
+  type    = map(string)
   default = {}
 }
 
 variable "tag_for_api_gw_rest_api" {
-  type    = "map"
+  type    = map(string)
   default = {}
 }
 
 variable "vpc_endpoint_ids" {
-  type    = "list"
+  type    = list
   default = []
 }
 
@@ -90,13 +90,13 @@ variable "vlink_description" {
 }
 
 variable "vlink_target_lb_arns_list" {
-  type        = "list"
+  type        = list
   description = "The list of network load balancer arns in the VPC targeted by the VPC link. Currently AWS only supports 1 target."
   default     = []
 }
 
 variable "tag_for_vpc_link" {
-  type    = "map"
+  type    = map(string)
   default = {}
 }
 
