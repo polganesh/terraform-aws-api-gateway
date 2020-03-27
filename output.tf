@@ -10,8 +10,8 @@ output "arn" {
   value = "${aws_api_gateway_rest_api.rest_api.arn}"
 }
 
-output "vpc_link_id" {
-  value = "${aws_api_gateway_vpc_link.main[0].id}"
+output "vpc_link_ids" {
+  value = ["${aws_api_gateway_vpc_link.main.*.id}"]
 }
 
 output "root_resource_id"{
